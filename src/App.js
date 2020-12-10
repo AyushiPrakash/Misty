@@ -11,7 +11,7 @@ function App() {
 
   const search = (e) => {
     var keyPress = e.keyCode || e.which;
-    if (keyPress === 13 && location.length>0) {
+    if (keyPress === 13 && location.length > 0) {
       axios
         .get(
           `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${process.env.REACT_APP_APIKEY}`
@@ -66,10 +66,9 @@ function App() {
     <div className="App">
       <div className="date">{dates(new Date())}</div>
 
+      <header>
       <div className="search">
-        <div className="searchIcon">
-          <AiOutlineSearch size={20} />
-        </div>
+        <AiOutlineSearch className="searchIcon" size={20} />
         <input
           className="searchInput"
           type="text"
@@ -79,6 +78,7 @@ function App() {
           onKeyPress={(e) => search(e)}
         />
       </div>
+      </header>
 
       {weather !== "" && (
         <div className="left-section">
