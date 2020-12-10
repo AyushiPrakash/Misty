@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Open Sans", sans-serif;
+  background-image: url("./assests/img1.jpg");
+  background-size: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search {
+  position: relative;
+  margin: 0 auto;
+  max-width: 500px;
+  padding-top: 3rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.searchInput {
+  width: 100%;
+  border: none;
+  background-color: #f5f1f0;
+  font-size: 14pt;
+  padding: 14px 15px 14px 45px;
+  color: #000000;
+  border-radius: 20px;
+  outline: none;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.searchIcon {
+  position: absolute;
+  top: 65%;
+  left: 1rem;
+  font-size: 12pt;
+  color: rgb(87, 83, 83);
+}
+
+.date {
+  margin: 4px 4px 0 20px;
+  font-size: 18pt;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: white;
+  transition: all 0.2s ease 1.5s;
+}
+
+.left-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  transition: all 0.2s ease 1.5s;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.place {
+  font-weight: 600;
+  font-size: 44pt;
+  padding: 2rem 0 0 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.container .icon {
+  width: 6rem;
+  height: 6rem;
+}
+
+.container .detailsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.temp {
+  font-size: 40pt;
+  font-weight: 400;
+}
+
+.description {
+  font-size: 18pt;
+  font-weight: 400;
+}
+
+.gridContainer {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1024px;
+  margin: 3rem auto;
+  background-color: rgba(255, 255, 255, 0.301);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.item {
+  color: white;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  padding: 1.25rem 0;
+  flex-basis: calc(33.3333%);
 }
