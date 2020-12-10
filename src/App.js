@@ -11,7 +11,7 @@ function App() {
 
   const search = (e) => {
     var keyPress = e.keyCode || e.which;
-    if (keyPress === 13) {
+    if (keyPress === 13 && location.length>0) {
       axios
         .get(
           `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=${process.env.REACT_APP_APIKEY}`
