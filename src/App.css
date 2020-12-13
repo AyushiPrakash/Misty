@@ -9,7 +9,7 @@
 body {
   min-height: 100vh;
   font-family: "Open Sans", sans-serif;
-  background-image: url("./assests/img1.jpg");
+  background-image: url("./assets/img1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -48,6 +48,13 @@ header {
   margin-right: 0.75rem;
   width: 1.5rem;
   height: 1.5rem;
+}
+
+.button{
+  padding: 0.5rem;
+  border-radius: 1rem;
+  outline: none;
+  background-color:rgb(240, 222, 222); ;
 }
 
 .date {
